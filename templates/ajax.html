@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+</head>
+<body>
+
+</body>
+<script src="/static?file=ajax.js"></script>
+<script>
+
+
+
+    log('begin js ajax test')
+    var form = {
+        a: 1,
+        b: 2,
+    }
+
+    log('ajax请求前')
+    ajax('POST', '/ajax/test', form, function (json) {
+        log('拿到ajax响应')
+        log('response data', json)
+    })
+    log('ajax请求后')
+    // log('response data', json)
+    // var response = ajax()
+    // log(response)
+</script>
+</html>
